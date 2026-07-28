@@ -216,3 +216,7 @@ h1 {
     gap: 6px;
   }
 }
+
+.empty-state[hidden] {
+  display: none;
+}

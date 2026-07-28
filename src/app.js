@@ -18,6 +18,7 @@ const headerCompletedCount = document.querySelector('#header-completed-count');
 const headerTotalCount = document.querySelector('#header-total-count');
 const completedCount = document.querySelector('#completed-count');
 const remainingCount = document.querySelector('#remaining-count');
+const emptyState = document.querySelector('#empty-state');
 
 let tasks = loadTasks();
 
@@ -73,6 +74,8 @@ function renderTasks() {
     const deleteButton = document.createElement('button');
 
     item.className = task.completed ? 'task-item completed' : 'task-item';
+
+    emptyState.hidden = tasks.length > 0;
 
     checkbox.className = 'task-toggle';
     checkbox.type = 'checkbox';
