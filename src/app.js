@@ -5,7 +5,6 @@ import {
   removeTask,
   toggleTask
 } from './taskCounter.js';
-import { formatTaskLabel } from './taskFormatter.js';
 
 const storageKey = 'git-task-counter-lab.tasks';
 
@@ -128,5 +127,13 @@ form.addEventListener('submit', (event) => {
       : 'Unable to add task.';
   }
 });
+
+
+export function formatTaskLabel(task) {
+  const status = task.completed ? 'completed' : 'not completed';
+
+  return `Task: ${task.title}, ${status}`;
+}
+
 
 render();
