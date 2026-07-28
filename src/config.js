@@ -1,1 +1,1 @@
-export const APP_TITLE = 'Team Task Counter';
+export const APP_TITLE = 'Student Task Counter';
