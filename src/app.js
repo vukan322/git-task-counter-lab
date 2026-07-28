@@ -8,6 +8,9 @@ import {
 
 const storageKey = 'git-task-counter-lab.tasks';
 
+
+console.log('cao');
+
 const form = document.querySelector('#task-form');
 const input = document.querySelector('#task-input');
 const errorElement = document.querySelector('#form-error');
