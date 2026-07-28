@@ -17,7 +17,7 @@ export function createTask(title, id) {
 }
 
 export function getTaskCounts(tasks) {
-  const completed = tasks.length;
+  const completed = tasks.filter((task) => task.completed).length;
 
   return {
     total: tasks.length,
