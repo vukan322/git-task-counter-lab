@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A small task counter project for learning Git and GitHub collaboration.">
+  <title>Task Counter</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="app-title">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Git collaboration lab</p>
+          <h1 id="app-title">Task Counter</h1>
+          <p class="description">Add tasks, complete them, and watch the counters update.</p>
+        </div>
+
+        <div class="counter-badge" aria-label="Completed tasks">
+          <span id="header-completed-count">0</span>
+          <span>/</span>
+          <span id="header-total-count">0</span>
+        </div>
+      </header>
+
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">Task title</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          maxlength="80"
+          placeholder="Enter a task"
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Add task</button>
+      </form>
+
+      <p id="form-error" class="form-error" role="alert" aria-live="polite"></p>
+
+      <div class="summary" aria-live="polite">
+        <span><strong id="remaining-count">0</strong> remaining</span>
+        <span><strong id="completed-count">0</strong> completed</span>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
