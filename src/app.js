@@ -22,6 +22,8 @@ const completedCount = document.querySelector('#completed-count');
 const remainingCount = document.querySelector('#remaining-count');
 const emptyState = document.querySelector('#empty-state');
 
+console.log('caoooo 123');
+
 let tasks = loadTasks();
 
 document.title = APP_TITLE;
